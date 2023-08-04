@@ -3,7 +3,7 @@ $(document).ready(function() {
         loop: false,
         margin: 10,
         items: 1,
-        center:true
+
     })
 });
 

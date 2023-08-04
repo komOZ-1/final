@@ -1,12 +1,12 @@
 <?php
 
-
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 
-class PriceController
+class PriceController extends Controller
 {
-    public function index() {
-        return view('price', ["data" => 'привет2']);
+    public function price() {
+        return view('price');
     }
 }

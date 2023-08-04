@@ -3,6 +3,7 @@
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\PriceController;
 use App\Http\Controllers\SingUpController;
+use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +18,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home',);
+
 });
-Route::get('/services', [ServicesController::class, 'index']);
-Route::get('/price', [PriceController::class, 'index']);
-Route::get('/singUp', [SingUpController::class, 'index']);
+
+Route::get('/services', [ServicesController::class, 'services']);
+Route::get('/price', [PriceController::class, 'price']);
+Route::get('/singUp', [SingUpController::class, 'singUp']);
+//Route::get('/review', [ReviewController::class, 'review']);
+//Route::post('/review/check', [ReviewController::class, 'review_check']);
+//Route::post('/review/check', [ReviewController::class, 'review'])->name('review_check');
+Route::get('/review', [ReviewController::class, 'review'])->name('review');
+Route::post('/review/check', [ReviewController::class, 'review_check'])->name('review_check');
 

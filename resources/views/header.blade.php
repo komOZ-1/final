@@ -140,8 +140,8 @@
                                 class="normal js-w-mainmenu ul-w-mainmenu-item-link" href="/price"
                                 data-type="page" target="_self">Прайс</a></div>
                         <div class="ul-w-mainmenu-item "><a
-                                class="normal js-w-mainmenu ul-w-mainmenu-item-link" href="/gallery"
-                                data-type="page" target="_self">Мои работы</a></div>
+                                class="normal js-w-mainmenu ul-w-mainmenu-item-link" href="/review"
+                                data-type="page" target="_self">Отзыв</a></div>
                         <!---<div class="ul-w-mainmenu-item "><a
                                 class="normal js-w-mainmenu ul-w-mainmenu-item-link" href="/contacts"
                                 data-type="page" target="_self">Контакты</a></div>

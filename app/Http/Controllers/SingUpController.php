@@ -1,12 +1,12 @@
 <?php
 
-
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 
-class SingUpController
+class SingUpController extends Controller
 {
-    public function index() {
-        return view('singUp', ["data" => 'привет']);
+    public function singUp() {
+        return view('singUp');
     }
 }

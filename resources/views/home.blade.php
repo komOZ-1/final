@@ -1,4 +1,19 @@
+<?php
+    $db = new PDO("mysql:host=localhost;dbname=final1", "root", "");
+
+    $info = [];
+
+    if ($query = $db->query("SELECT * FROM contacts")) {
+        $info = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    } else {
+        print_r($db->errorInfo());
+    }
+
+?>
 @extends('layouts/app')
+
+@section('title')Главная@endsection
 
 @section('header')
     @include('header')
@@ -16,9 +31,9 @@
             <div class="ul-shadow-block-overlay js-block-shadow"></div>
             <div class=" ul-container-no-padding container-fluid js-block-container">
                 <div id="ul-id-202-1" class="row ul-row">
-                    <div id="ul-id-202-2" class="col ul-col col-xs-12 col-sm-12 col-md-12">
+                    <div id="ul-id-202-2" class="col ul-col col-xs-12 col-sm-12 col-md-12 ">
                         <div id="ul-content">
-                            <div class="owl-carousel owl-theme">
+                            <div class="owl-carousel owl-theme ">
                                 <div class="ul-type-slider item">
                                     <link itemprop="contentUrl"
                                           href="/templates/nogtevoi_design_1/img/full_D7zJQqRI.jpg">
@@ -677,6 +692,48 @@
                         <style data-styled="true" data-styled-version="5.0.1"></style>
                         <div id="ul-id-204-6" class="sc-AxjAm StDqM ul-widget-wysivig ul-wysivig-editor ">
                             <h1 style="text-align: center;"><span class="g-color-text-1">Отзывы</span></h1>
+                            <div class="owl-carousel owl-theme owl-loaded owl-drag">
+                                <?php foreach ($info as $data):      ?>
+                                <div id="ul-id-204-11" class="col ul-col col-xs-12 col-sm-12 col-md-4 ul-type-slider item ul-slider-wysy">
+
+                                    <div id="ul-id-204-12" class="ul-widget ul-w-review"
+                                         data-device-hidden="{'desktop':false,'phone':false,'tablet':false}"
+                                         data-widget="review" data-controls="mer">
+                                        <div class="ul-w-review-design1 ul-w-review-custom-design1">
+                                            <div class="ul-w-review-tabcontent">
+                                                <div class="ul-w-review-tabpane active" data-index="0" data-item-id="">
+                                                    <div class="ul-w-review-item " itemscope
+                                                         itemtype="http://schema.org/Review">
+                                                        <link itemprop="url"
+                                                              href="//template_nogtevoi_design_1.ulight12.uid.me/#ul-id-204-12"/>
+                                                        <meta itemprop="datePublished" content="20201202T051631"/>
+                                                        <div itemprop="itemReviewed" itemscope
+                                                             itemtype="https://schema.org/Organization">
+                                                            <meta itemprop="name" content="Дизайн&nbsp;маникюра"/>
+                                                        </div>
+                                                        <img src="/templates/nogtevoi_design_1/img/full_LlFOY2vP.jpg"
+                                                             class="ul-w-review-avatar"/>
+                                                        <div class="ul-w-review-titles" itemprop="author" itemscope
+                                                             itemtype="http://schema.org/Person"> <span
+                                                                class="ul-w-review-name h4" data-name="name"
+                                                                placeholder="Имя..." itemprop="name">
+                                                            <?= $data['email']; ?>
+                                                        </span></div>
+                                                        <div class="ul-w-review-text">
+                                                            <h3><?= $data['subject']; ?></h3>
+                                                            <div class="ul-w-review-text-paragraph normal"
+                                                                 data-name="review" placeholder="Текст отзыва..."
+                                                                 itemprop="reviewBody"><?= $data['message']; ?>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -710,7 +767,8 @@
                     </div>
                 </div>
             </div>
-            <div id="ul-id-204-10" class="row ul-row">
+
+           <!--- <div id="ul-id-204-10" class="row ul-row">
                 <div id="ul-id-204-11" class="col ul-col col-xs-12 col-sm-12 col-md-4">
                     <div id="ul-id-204-12" class="ul-widget ul-w-review"
                          data-device-hidden="{'desktop':false,'phone':false,'tablet':false}"
@@ -833,7 +891,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --->
             <div id="ul-id-204-17" class="row ul-row">
                 <div id="ul-id-204-18" class="col ul-col col-xs-12 col-sm-12 col-md-12">
                     <div id="ul-id-204-19" class="ul-widget  " type="uSpacer"

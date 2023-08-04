@@ -1,16 +1,5 @@
-.section {
-    background-color: #6acfd2;
 
+#my1 {
+    display: flex;
+    justify-content: center;
 }
-
-.section2 {
-    background-color: chocolate;
-
-}
-
-.services-my {
-    text-align: center;
-
-}
-
-
