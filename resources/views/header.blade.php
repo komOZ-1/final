@@ -123,36 +123,39 @@
                 </div>
             </div>
             <div class="menu-head col-xs-12 col-sm-12 col-md-7 col-lg-8">
-                <div data-fixed="false" data-bgColor="0" data-bgtransparent="100" data-version="1"
-                     id="ul-id-mainmenu-main" class="ul-widget ul-w-mainmenu"
-                     data-device-hidden="{'desktop':false,'phone':false,'tablet':false}"
-                     data-widget="mainmenu" data-controls="e">
-                    <div class="ul-w-mainmenu-showButton"><span></span> <span></span> <span></span>
+                <div data-fixed="false" data-bgcolor="0" data-bgtransparent="100" data-version="1" id="ul-id-mainmenu-main" class="ul-widget ul-w-mainmenu" data-device-hidden="{&quot;desktop&quot;:false,&quot;phone&quot;:false,&quot;tablet&quot;:false}" data-widget="mainmenu" data-controls="e">
+                    <div class="ul-w-mainmenu-showButton">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
-                    <div class="ul-w-mainmenu-nav">
-                        <div class="ul-w-mainmenu-item  ul-w-mainmenu-active-item"><a
+                    <div class="ul-w-mainmenu-nav htablet" style="">
+                        <div class="ul-w-mainmenu-toggle-button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="ul-w-mainmenu-item  ul-w-mainmenu-active-item" style=""><a
                                 class="normal js-w-mainmenu ul-w-mainmenu-item-link" href="/"
                                 data-type="page" target="_self">Главная</a></div>
-                        <div class="ul-w-mainmenu-item "><a
+                        <div class="ul-w-mainmenu-item" style=""><a
                                 class="normal js-w-mainmenu ul-w-mainmenu-item-link" href="/services"
                                 data-type="page" target="_self">Услуги</a></div>
-                        <div class="ul-w-mainmenu-item "><a
+                        <div class="ul-w-mainmenu-item" style=""><a
                                 class="normal js-w-mainmenu ul-w-mainmenu-item-link" href="/price"
                                 data-type="page" target="_self">Прайс</a></div>
-                        <div class="ul-w-mainmenu-item "><a
+                        <div class="ul-w-mainmenu-item" style=""><a
                                 class="normal js-w-mainmenu ul-w-mainmenu-item-link" href="/review"
                                 data-type="page" target="_self">Отзыв</a></div>
-                        <!---<div class="ul-w-mainmenu-item "><a
-                                class="normal js-w-mainmenu ul-w-mainmenu-item-link" href="/contacts"
-                                data-type="page" target="_self">Контакты</a></div>
-                        <div class="ul-w-mainmenu-item "><a
-                                class="normal js-w-mainmenu ul-w-mainmenu-item-link" href="/news"
-                                data-type="page" target="_self">Новости</a></div>
-                        <div class="ul-w-mainmenu-toggle-button"><span></span><span></span><span></span>
-                        </div>--->
+                        <div class="ul-w-mainmenu-item" style=""><a
+                                class="normal js-w-mainmenu ul-w-mainmenu-item-link" href="/homeRegister"
+                                data-type="page" target="_self">Регистрация</a>
+                        </div>
                     </div>
                 </div>
             </div>
+            <script type="text/javascript" src="/widgets/mainmenu/js/fontobserver.js"></script>
+            <script type="text/javascript" src="/widgets/mainmenu/js/preView.js"></script>
         </div>
     </div>
 </header>

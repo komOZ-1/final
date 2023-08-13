@@ -1,31 +1,17 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Шаблон для сайта &quot;Дизайн ногтей&quot; из категории &quot;Нэйл-мастер&quot;. Идеален для: студии дизайна, маникюрного салона, визитки и&nbsp;портфолио нэйл-мастера.">
-    <meta name="author" content="U-Light">
-
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title')</title>
-
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="/css/base.min.css">
-    <link rel="stylesheet" href="/css/neowizard.css">
-    <link rel="stylesheet" href="/css/seowizard.css">
-@yield('head')
-<!-- Styles -->
-
     <link rel="stylesheet" href="{{ asset('css/libs/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/libs/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/libs/fontawesome-brand.min.css') }}">
@@ -36,25 +22,32 @@
     <script type="text/javascript" src="{{ asset('js/libs/jquery-2.1.0.min.js') }}"></script>
     <script type="text/javascript" charset="utf-8" src="{{ asset('/js/libs/owl.carousel.min.js') }}"></script>
     <script type="text/javascript" charset="utf-8" src="{{ asset('/js/main.js') }}"></script>
-    <link rel="stylesheet" href="{{ asset('/css/my-style.css') }}">
+
+    <!-- Scripts -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
-<div id="main">
-    <div id="body" class="g-theme-site-1" data-mode="published" data-site-theme="g-theme-site-1">
-        <div id="body-fict" class="g-theme-block-1 ul-page-common-index">
-            @yield('login')
-            @yield('header')
+<div id="app">
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url('/home') }}">
+                {{ config('app.name', 'HOME') }}
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <div class="container">
 
-                <div class="">
-                    @yield('content')
-                </div>
-            </div>
-
-            @yield('footer')
         </div>
-    </div>
+    </nav>
+
+    <main class="py-4">
+        @yield('content')
+    </main>
+
+    @yield('footer')
+
+
 
 </div>
 </body>

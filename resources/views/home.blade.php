@@ -1,14 +1,14 @@
 <?php
-    $db = new PDO("mysql:host=localhost;dbname=final1", "root", "");
+$db = new PDO("mysql:host=localhost;dbname=final1", "root", "");
 
-    $info = [];
+$info = [];
 
-    if ($query = $db->query("SELECT * FROM contacts")) {
-        $info = $query->fetchAll(PDO::FETCH_ASSOC);
+if ($query = $db->query("SELECT * FROM contacts")) {
+    $info = $query->fetchAll(PDO::FETCH_ASSOC);
 
-    } else {
-        print_r($db->errorInfo());
-    }
+} else {
+    print_r($db->errorInfo());
+}
 
 ?>
 @extends('layouts/app')
@@ -768,130 +768,130 @@
                 </div>
             </div>
 
-           <!--- <div id="ul-id-204-10" class="row ul-row">
-                <div id="ul-id-204-11" class="col ul-col col-xs-12 col-sm-12 col-md-4">
-                    <div id="ul-id-204-12" class="ul-widget ul-w-review"
-                         data-device-hidden="{'desktop':false,'phone':false,'tablet':false}"
-                         data-widget="review" data-controls="mer">
-                        <div class="ul-w-review-design1 ul-w-review-custom-design1">
-                            <div class="ul-w-review-tabcontent">
-                                <div class="ul-w-review-tabpane active" data-index="0" data-item-id="">
-                                    <div class="ul-w-review-item " itemscope
-                                         itemtype="http://schema.org/Review">
-                                        <link itemprop="url"
-                                              href="//template_nogtevoi_design_1.ulight12.uid.me/#ul-id-204-12"/>
-                                        <meta itemprop="datePublished" content="20201202T051631"/>
-                                        <div itemprop="itemReviewed" itemscope
-                                             itemtype="https://schema.org/Organization">
-                                            <meta itemprop="name" content="Дизайн&nbsp;маникюра"/>
-                                        </div>
-                                        <img src="/templates/nogtevoi_design_1/img/full_LlFOY2vP.jpg"
-                                             class="ul-w-review-avatar"/>
-                                        <div class="ul-w-review-titles" itemprop="author" itemscope
-                                             itemtype="http://schema.org/Person"> <span
-                                                class="ul-w-review-name h4" data-name="name"
-                                                placeholder="Имя..." itemprop="name">
-                                    Евгения Потапова&nbsp;
-                                </span></div>
-                                        <div class="ul-w-review-text">
-                                            <div class="ul-w-review-text-paragraph normal"
-                                                 data-name="review" placeholder="Текст отзыва..."
-                                                 itemprop="reviewBody"> Алёна лучший мастер!!!!Любой каприз,
-                                                любое желание воплощается в идеале! Более 4 лет я радовалась
-                                                красивым рукам. Такого специалиста трудно найти.А педикюр
-                                                это просто сказка.Очень рекомендую!
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="ul-id-204-13" class="col ul-col col-xs-12 col-sm-12 col-md-4">
-                    <div id="ul-id-204-14" class="ul-widget ul-w-review"
-                         data-device-hidden="{'desktop':false,'phone':false,'tablet':false}"
-                         data-widget="review" data-controls="mer">
-                        <div class="ul-w-review-design1 ul-w-review-custom-design1">
-                            <div class="ul-w-review-tabcontent">
-                                <div class="ul-w-review-tabpane active" data-index="0" data-item-id="">
-                                    <div class="ul-w-review-item " itemscope
-                                         itemtype="http://schema.org/Review">
-                                        <link itemprop="url"
-                                              href="//template_nogtevoi_design_1.ulight12.uid.me/#ul-id-204-14"/>
-                                        <meta itemprop="datePublished" content="20201202T051631"/>
-                                        <div itemprop="itemReviewed" itemscope
-                                             itemtype="https://schema.org/Organization">
-                                            <meta itemprop="name" content="Дизайн&nbsp;маникюра"/>
-                                        </div>
-                                        <img src="/templates/nogtevoi_design_1/img/yrwkO5wQ.jpg"
-                                             class="ul-w-review-avatar"/>
-                                        <div class="ul-w-review-titles" itemprop="author" itemscope
-                                             itemtype="http://schema.org/Person"> <span
-                                                class="ul-w-review-name h4" data-name="name"
-                                                placeholder="Имя..." itemprop="name">
-                                    Александра&nbsp;Воробьёва
-                                </span></div>
-                                        <div class="ul-w-review-text">
-                                            <div class="ul-w-review-text-paragraph normal"
-                                                 data-name="review" placeholder="Текст отзыва..."
-                                                 itemprop="reviewBody"> Была на маникюре. Алёна оказалась
-                                                приятным человеком, приветливая, чуткая, внимательная,
-                                                настоящий профессионал. Мне было очень приятно отдать ей
-                                                заботу о своих ручках. Спасибо большое мастер!
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="ul-id-204-15" class="col ul-col col-xs-12 col-sm-12 col-md-4">
-                    <div id="ul-id-204-16" class="ul-widget ul-w-review"
-                         data-device-hidden="{'desktop':false,'phone':false,'tablet':false}"
-                         data-widget="review" data-controls="mer">
-                        <div class="ul-w-review-design1 ul-w-review-custom-design1">
-                            <div class="ul-w-review-tabcontent">
-                                <div class="ul-w-review-tabpane active" data-index="0" data-item-id="">
-                                    <div class="ul-w-review-item " itemscope
-                                         itemtype="http://schema.org/Review">
-                                        <link itemprop="url"
-                                              href="//template_nogtevoi_design_1.ulight12.uid.me/#ul-id-204-16"/>
-                                        <meta itemprop="datePublished" content="20201202T051631"/>
-                                        <div itemprop="itemReviewed" itemscope
-                                             itemtype="https://schema.org/Organization">
-                                            <meta itemprop="name" content="Дизайн&nbsp;маникюра"/>
-                                        </div>
-                                        <img src="/templates/nogtevoi_design_1/img/oHJUoE1A.jpg"
-                                             class="ul-w-review-avatar"/>
-                                        <div class="ul-w-review-titles" itemprop="author" itemscope
-                                             itemtype="http://schema.org/Person"> <span
-                                                class="ul-w-review-name h4" data-name="name"
-                                                placeholder="Имя..." itemprop="name">
-                                    Вероника&nbsp;Кошелева
-                                </span>
-                                            <div class="ul-w-review-extra note" itemprop="jobTitle"
-                                                 data-name="extra" placeholder="Дополнительное поле...">
-                                                Должность, статус и тп.
-                                            </div>
-                                        </div>
-                                        <div class="ul-w-review-text">
-                                            <div class="ul-w-review-text-paragraph normal"
-                                                 data-name="review" placeholder="Текст отзыва..."
-                                                 itemprop="reviewBody"> Впервую очередь хочу сказать:
-                                                СПАСИБО Алёна!!! За чудесный маникюр, за то, что из моих
-                                                ногтей ТЫ сделала картинку! Не пожалеете, Алёна — Мастер
-                                                своего дела!
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> --->
+            <!--- <div id="ul-id-204-10" class="row ul-row">
+                 <div id="ul-id-204-11" class="col ul-col col-xs-12 col-sm-12 col-md-4">
+                     <div id="ul-id-204-12" class="ul-widget ul-w-review"
+                          data-device-hidden="{'desktop':false,'phone':false,'tablet':false}"
+                          data-widget="review" data-controls="mer">
+                         <div class="ul-w-review-design1 ul-w-review-custom-design1">
+                             <div class="ul-w-review-tabcontent">
+                                 <div class="ul-w-review-tabpane active" data-index="0" data-item-id="">
+                                     <div class="ul-w-review-item " itemscope
+                                          itemtype="http://schema.org/Review">
+                                         <link itemprop="url"
+                                               href="//template_nogtevoi_design_1.ulight12.uid.me/#ul-id-204-12"/>
+                                         <meta itemprop="datePublished" content="20201202T051631"/>
+                                         <div itemprop="itemReviewed" itemscope
+                                              itemtype="https://schema.org/Organization">
+                                             <meta itemprop="name" content="Дизайн&nbsp;маникюра"/>
+                                         </div>
+                                         <img src="/templates/nogtevoi_design_1/img/full_LlFOY2vP.jpg"
+                                              class="ul-w-review-avatar"/>
+                                         <div class="ul-w-review-titles" itemprop="author" itemscope
+                                              itemtype="http://schema.org/Person"> <span
+                                                 class="ul-w-review-name h4" data-name="name"
+                                                 placeholder="Имя..." itemprop="name">
+                                     Евгения Потапова&nbsp;
+                                 </span></div>
+                                         <div class="ul-w-review-text">
+                                             <div class="ul-w-review-text-paragraph normal"
+                                                  data-name="review" placeholder="Текст отзыва..."
+                                                  itemprop="reviewBody"> Алёна лучший мастер!!!!Любой каприз,
+                                                 любое желание воплощается в идеале! Более 4 лет я радовалась
+                                                 красивым рукам. Такого специалиста трудно найти.А педикюр
+                                                 это просто сказка.Очень рекомендую!
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div id="ul-id-204-13" class="col ul-col col-xs-12 col-sm-12 col-md-4">
+                     <div id="ul-id-204-14" class="ul-widget ul-w-review"
+                          data-device-hidden="{'desktop':false,'phone':false,'tablet':false}"
+                          data-widget="review" data-controls="mer">
+                         <div class="ul-w-review-design1 ul-w-review-custom-design1">
+                             <div class="ul-w-review-tabcontent">
+                                 <div class="ul-w-review-tabpane active" data-index="0" data-item-id="">
+                                     <div class="ul-w-review-item " itemscope
+                                          itemtype="http://schema.org/Review">
+                                         <link itemprop="url"
+                                               href="//template_nogtevoi_design_1.ulight12.uid.me/#ul-id-204-14"/>
+                                         <meta itemprop="datePublished" content="20201202T051631"/>
+                                         <div itemprop="itemReviewed" itemscope
+                                              itemtype="https://schema.org/Organization">
+                                             <meta itemprop="name" content="Дизайн&nbsp;маникюра"/>
+                                         </div>
+                                         <img src="/templates/nogtevoi_design_1/img/yrwkO5wQ.jpg"
+                                              class="ul-w-review-avatar"/>
+                                         <div class="ul-w-review-titles" itemprop="author" itemscope
+                                              itemtype="http://schema.org/Person"> <span
+                                                 class="ul-w-review-name h4" data-name="name"
+                                                 placeholder="Имя..." itemprop="name">
+                                     Александра&nbsp;Воробьёва
+                                 </span></div>
+                                         <div class="ul-w-review-text">
+                                             <div class="ul-w-review-text-paragraph normal"
+                                                  data-name="review" placeholder="Текст отзыва..."
+                                                  itemprop="reviewBody"> Была на маникюре. Алёна оказалась
+                                                 приятным человеком, приветливая, чуткая, внимательная,
+                                                 настоящий профессионал. Мне было очень приятно отдать ей
+                                                 заботу о своих ручках. Спасибо большое мастер!
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div id="ul-id-204-15" class="col ul-col col-xs-12 col-sm-12 col-md-4">
+                     <div id="ul-id-204-16" class="ul-widget ul-w-review"
+                          data-device-hidden="{'desktop':false,'phone':false,'tablet':false}"
+                          data-widget="review" data-controls="mer">
+                         <div class="ul-w-review-design1 ul-w-review-custom-design1">
+                             <div class="ul-w-review-tabcontent">
+                                 <div class="ul-w-review-tabpane active" data-index="0" data-item-id="">
+                                     <div class="ul-w-review-item " itemscope
+                                          itemtype="http://schema.org/Review">
+                                         <link itemprop="url"
+                                               href="//template_nogtevoi_design_1.ulight12.uid.me/#ul-id-204-16"/>
+                                         <meta itemprop="datePublished" content="20201202T051631"/>
+                                         <div itemprop="itemReviewed" itemscope
+                                              itemtype="https://schema.org/Organization">
+                                             <meta itemprop="name" content="Дизайн&nbsp;маникюра"/>
+                                         </div>
+                                         <img src="/templates/nogtevoi_design_1/img/oHJUoE1A.jpg"
+                                              class="ul-w-review-avatar"/>
+                                         <div class="ul-w-review-titles" itemprop="author" itemscope
+                                              itemtype="http://schema.org/Person"> <span
+                                                 class="ul-w-review-name h4" data-name="name"
+                                                 placeholder="Имя..." itemprop="name">
+                                     Вероника&nbsp;Кошелева
+                                 </span>
+                                             <div class="ul-w-review-extra note" itemprop="jobTitle"
+                                                  data-name="extra" placeholder="Дополнительное поле...">
+                                                 Должность, статус и тп.
+                                             </div>
+                                         </div>
+                                         <div class="ul-w-review-text">
+                                             <div class="ul-w-review-text-paragraph normal"
+                                                  data-name="review" placeholder="Текст отзыва..."
+                                                  itemprop="reviewBody"> Впервую очередь хочу сказать:
+                                                 СПАСИБО Алёна!!! За чудесный маникюр, за то, что из моих
+                                                 ногтей ТЫ сделала картинку! Не пожалеете, Алёна — Мастер
+                                                 своего дела!
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div> --->
             <div id="ul-id-204-17" class="row ul-row">
                 <div id="ul-id-204-18" class="col ul-col col-xs-12 col-sm-12 col-md-12">
                     <div id="ul-id-204-19" class="ul-widget  " type="uSpacer"
