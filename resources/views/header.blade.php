@@ -34,6 +34,19 @@
                                         <li class="ul-w-contacts-f-email normal"><a
                                                 href="mailto:support@ukit.com"><span itemprop="email">support@ukit.com</span></a>
                                         </li>
+
+                                        <li>
+                                            <a href="/homeRegister">
+                                                <?php
+                                                if (Auth::user() != null){
+                                                    echo ("Вы вошли под именем:" . "  " . Auth::user()->name);
+                                                } else {
+                                                    echo ("Авторизуйтесь на сайте");
+                                                }
+                                                ?>
+                                            </a>
+                                        </li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -49,7 +62,7 @@
                          data-device-hidden="{'desktop':false,'phone':false,'tablet':false}"
                          data-controls="e" style="text-align:left; "> <span class="ul-w-social-icons"
                                                                             style="display: inline-block;">
-        <!-- NOTE: if 'ul-w-social-icon ul-w-social-<name>' changes, update edit.js -->
+         NOTE: if 'ul-w-social-icon ul-w-social-<name>' changes, update edit.js
 
 
             <span class="ul-w-social-item">
@@ -153,9 +166,9 @@
                         </div>
                     </div>
                 </div>
+
             </div>
-            <script type="text/javascript" src="/widgets/mainmenu/js/fontobserver.js"></script>
-            <script type="text/javascript" src="/widgets/mainmenu/js/preView.js"></script>
+
         </div>
     </div>
 </header>

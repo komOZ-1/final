@@ -1,5 +1,19 @@
+.slick-prev:before, .slick-next:before {
+    color: #46c9aa;
+}
+.slick-prev, .slick-next {
+    width: 30px;
+    height: 30px;
+    z-index: 555;
+}
+.slick-prev:before, .slick-next:before {
+    font-size: 30px;
+}
 
-#my1 {
-    display: flex;
-    justify-content: center;
+.slick-next {
+    right: 0;
+}
+
+.slick-prev {
+    left: 0;
 }

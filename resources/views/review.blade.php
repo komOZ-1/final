@@ -32,10 +32,9 @@
             <button type="submit" class="ul-w-button1 ul-w-downloadFile-showButton ul-w-feedBack-submit middle">Отправить</button>
         </form>
     </div>
-
-
   @endsection
 
 @section('footer')
     @include('footer')
 @endsection
+

@@ -1,3 +1,4 @@
+<div class="footer-middle">
 <footer class=" js-hidden-device-element hidden-elements-device
                 " data-device-hidden='{"desktop":false,"tablet":false,"phone":false}'
         data-theme-block='{"desktop":"g-theme-block-1","tablet":"g-theme-block-1","phone":"g-theme-block-1"}'>
@@ -203,3 +204,4 @@
         </div>
     </div>
 </footer>
+</div>
